@@ -1,0 +1,51 @@
+{
+    "name": "conduit-ui/know",
+    "description": "Agent domain knowledge - how/why/what/remember",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["knowledge", "agent", "memory", "conduit-ui", "laravel"],
+    "authors": [
+        {
+            "name": "Jordan Partridge",
+            "email": "jordan@partridge.rocks"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0||^11.0||^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "pestphp/pest": "^3.0",
+        "orchestra/testbench": "^8.0||^9.0||^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConduitUI\\Know\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ConduitUI\\Know\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConduitUI\\Know\\KnowServiceProvider"
+            ],
+            "aliases": {
+                "Know": "ConduitUI\\Know\\Facades\\Know"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
